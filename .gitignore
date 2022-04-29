@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>                             //um die zufällige Zahl zu generieren
+int main()
+{
+srand(time(NULL));                            //Die zufallsnummer wird bestimmt
+int zahler=0;                                 //Der Zähler wird bestimmt und auf 0 bestimmt
+int geheimzahl1 =rand() %9+1;                 //Die erste geheime Zahl wird bestimmt
+int geheimzahl2 =rand() %9+1;                 //Die zweite geheime Zahl wird bestimmt
+int geheimzahl3 =rand() %9+1;                 //Die dritte geheime Zahl wird bestimmt
+int geheimzahl4 =rand() %9+1;                 //Die vierte geheime Zahl wird bestimmt
+int geheimzahl5 =rand() %9+1;                 //Die fünfte geheime Zahl wird bestimmt
+int geheimzahl6 =rand() %9+1;                 //Die sechste geheime Zahl wird bestimmt
+
+int zahl1=0;                                  //Die erste Zahl die man eingibt wird bestimmt
+int zahl2=0;                                  //Die zweite Zahl die man eingibt wird bestimmt
+int zahl3=0;                                  //Die dritte Zahl.....
+int zahl4=0;                                  //Die vierte....
+int zahl5=0;                                  //5te
+int zahl6=0;                                  //6
+printf("Bingo\n");                            //printf zum ausgeben von Text in der Console
+printf("Versuche die 6 Zahlen zu raten\n");   //\n um einen Absatz zu machen
+while(1)                                      //while(1) {} um eine Schleife zu bilden
+{zahler++;                                    //zahler++ um den Zähler um einen Versuch drauf zu zählen
+if (zahl1!=geheimzahl1){                      //if(Bedingung) {Wenn Bedingung erfüllt} in die Klammer kommt die Bedingung in diesem Fall steht hier. Ist die erste Zahl die wir eingeben ungleich der ersten geheimen Zahl
+printf("Erste Zahl:\t\t\t");
+scanf("%d",&zahl1);}
+if(zahl2!=geheimzahl2){
+printf("\nZweite Zahl:\t\t\t");
+scanf("%d",&zahl2);}
+if (zahl3!=geheimzahl3){
+printf("\nDritte Zahl:\t\t\t");
+scanf("%d",&zahl3);}
+if (zahl4!=geheimzahl4){
+printf("\nVierte Zahl:\t\t\t");
+scanf("%d",&zahl4);}
+if (zahl5!=geheimzahl5){
+printf("\nFünfte Zahl:\t\t\t");
+scanf("%d",&zahl5);}
+if (zahl6!=geheimzahl6){
+printf("\nSechste Zahl:\t\t\t");
+scanf("%d",&zahl6);}
+printf("_________________________________");
+if((zahl1==geheimzahl1) && (zahl2==geheimzahl2) && (zahl3==geheimzahl3) && (zahl4==geheimzahl4) && (zahl5==geheimzahl5) && (zahl6==geheimzahl6)){
+printf("\nWow alle Zahlen richtig!\n");
+break;}
+if(zahl1<geheimzahl1){
+printf("\nErste Zahl ist zu klein\n");}
+if(zahl1>geheimzahl1){
+printf("\nErste Zahl ist zu gross\n");}
+if(zahl1==geheimzahl1){
+printf("\nErste Zahl ist richtig!\nes war die\t\t\t%d\n",zahl1);
+}
+if(zahl2<geheimzahl2){
+printf("\nZweite Zahl ist zu klein\n");}
+if(zahl2>geheimzahl2){
+printf("\nZweite Zahl ist zu gross\n");}
+if(zahl2==geheimzahl2){
+printf("\nZweite Zahl ist richtig!\nes war die\t\t\t%d\n",zahl2);
+}
+if(zahl3<geheimzahl3){
+printf("\nDritte Zahl ist zu klein\n");}
+if(zahl3>geheimzahl3){
+printf("\nDritte Zahl ist zu gross\n");}
+if(zahl3==geheimzahl3){
+printf("\nDritte Zahl ist richtig!\nes war die\t\t\t%d\n",zahl3);
+}
+if(zahl4<geheimzahl4){
+printf("\nVierte Zahl ist zu klein\n");}
+if(zahl4>geheimzahl4){
+printf("\nVierte Zahl ist zu gross\n");}
+if(zahl4==geheimzahl4){
+printf("\nVierte Zahl ist richtig!\nes war die\t\t\t%d\n",zahl4);
+}
+if(zahl5<geheimzahl5){
+printf("\nFünfte Zahl ist zu klein\n");}
+if(zahl5>geheimzahl5){
+printf("\nFünfte Zahl ist zu gross\n");}
+if(zahl5==geheimzahl5){
+printf("\nFünfte Zahl ist richtig!\nes war die\t\t\t%d\n",zahl5);
+}
+if(zahl6<geheimzahl6){
+printf("\nSechste Zahl ist zu klein\n");
+printf("_________________________________\n");}
+if(zahl6>geheimzahl6){
+printf("\nSechste Zahl ist zu gross\n");
+printf("__________________________________\n");}
+if(zahl6==geheimzahl6){
+printf("\nSechste Zahl ist richtig!\nes war die\t\t\t%d\n",zahl6);
+printf("__________________________________\n");
+}
+}
+printf("Die Zahlen lauten\n%d, %d, %d, %d, %d, %d\n",geheimzahl1,geheimzahl2,geheimzahl3,geheimzahl4,geheimzahl5,geheimzahl6);
+printf("Du hast %d Versuche gebraucht!\n", zahler);
+system("pause");
+return 0;
+}
